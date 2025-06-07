@@ -1,6 +1,6 @@
-import type { LanguageMetadata, LanguageTranslation } from '../types';
+import type { LanguageMetadata } from '../types';
 
-export const ar: LanguageTranslation = {
+export const ar = {
     translation: {
         menu: {
             file: {
@@ -8,14 +8,14 @@ export const ar: LanguageTranslation = {
                 new: 'جديد',
                 open: 'فتح',
                 save: 'حفظ',
-                import: 'استيراد قاعدة بيانات',
-                export_sql: 'SQL تصدير',
+                import: 'استيراد',
+                export_sql: 'تصدير SQL',
                 export_as: 'تصدير كـ',
-                delete_diagram: 'حذف الرسم البياني',
+                delete_diagram: 'حذف الرسم التخطيطي',
                 exit: 'خروج',
             },
             edit: {
-                edit: 'تحرير',
+                edit: 'تعديل',
                 undo: 'تراجع',
                 redo: 'إعادة',
                 clear: 'مسح',
@@ -24,57 +24,52 @@ export const ar: LanguageTranslation = {
                 view: 'عرض',
                 show_sidebar: 'إظهار الشريط الجانبي',
                 hide_sidebar: 'إخفاء الشريط الجانبي',
-                hide_cardinality: 'إخفاء الكاردينالية',
-                show_cardinality: 'إظهار الكاردينالية',
-                zoom_on_scroll: 'تكبير/تصغير عند التمرير',
-                theme: 'المظهر',
-                show_dependencies: 'إظهار الاعتمادات',
-                hide_dependencies: 'إخفاء الاعتمادات',
-                // TODO: Translate
-                show_minimap: 'Show Mini Map',
-                hide_minimap: 'Hide Mini Map',
+                hide_cardinality: 'إخفاء العلاقات',
+                show_cardinality: 'إظهار العلاقات',
+                zoom_on_scroll: 'تكبير/تصغير بالتمرير',
+                theme: 'السمة',
+                show_dependencies: 'إظهار التبعيات',
+                hide_dependencies: 'إخفاء التبعيات',
+                show_minimap: 'إظهار الخريطة المصغرة',
+                hide_minimap: 'إخفاء الخريطة المصغرة',
             },
             backup: {
-                backup: 'النسخ الاحتياطي',
-                export_diagram: 'تصدير المخطط',
-                restore_diagram: 'استعادة المخطط',
+                backup: 'نسخ احتياطي',
+                export_diagram: 'تصدير الرسم',
+                restore_diagram: 'استعادة الرسم',
             },
             help: {
                 help: 'مساعدة',
-                docs_website: 'الوثائق',
+                docs_website: 'التوثيق',
                 join_discord: 'انضم إلينا على Discord',
             },
         },
 
         delete_diagram_alert: {
-            title: 'حذف المخطط',
-            description:
-                '.لا يمكن التراجع عن هذا الإجراء. سيتم حذف الرسم البياني بشكل دائم',
+            title: 'حذف الرسم التخطيطي',
+            description: 'لا يمكن التراجع عن هذا الإجراء. سيتم حذف الرسم التخطيطي نهائيًا.',
             cancel: 'إلغاء',
             delete: 'حذف',
         },
 
         clear_diagram_alert: {
-            title: 'مسح الرسم البياني',
-            description:
-                '.لا يمكن التراجع عن هذا الاجراء. سيتم حذف جميع البيانات في الرسم البياني بشكل دائم',
+            title: 'مسح الرسم التخطيطي',
+            description: 'لا يمكن التراجع عن هذا الإجراء. سيتم حذف جميع البيانات في الرسم نهائيًا.',
             cancel: 'إلغاء',
             clear: 'مسح',
         },
 
         reorder_diagram_alert: {
-            title: 'إعادة ترتيب الرسم البياني',
-            description:
-                'هذا الإجراء سيقوم بإعادة ترتيب الجداول في المخطط بشكل تلقائي. هل تريد المتابعة؟',
+            title: 'إعادة ترتيب الرسم',
+            description: 'سيؤدي هذا الإجراء إلى إعادة ترتيب جميع الجداول في الرسم. هل تريد المتابعة؟',
             reorder: 'إعادة ترتيب',
             cancel: 'إلغاء',
         },
 
         multiple_schemas_alert: {
             title: 'مخططات متعددة',
-            description:
-                '{{formattedSchemas}} :مخططات في هذا الرسم البياني. يتم حاليا عرض {{schemasCount}} هناك',
-            dont_show_again: 'لا تظهره مجدداً',
+            description: '{{schemasCount}} مخططات في هذا الرسم. المعروض حاليًا: {{formattedSchemas}}.',
+            dont_show_again: "عدم الإظهار مرة أخرى",
             change_schema: 'تغيير',
             none: 'لا شيء',
         },
@@ -82,11 +77,11 @@ export const ar: LanguageTranslation = {
         copy_to_clipboard_toast: {
             unsupported: {
                 title: 'فشل النسخ',
-                description: '.الحافظة غير مدعومة',
+                description: 'الحافظة غير مدعومة.',
             },
             failed: {
                 title: 'فشل النسخ',
-                description: 'حدث خطأ أثناء النسخ. حاول مجدداً',
+                description: 'حدث خطأ ما. يرجى المحاولة مرة أخرى.',
             },
         },
 
@@ -103,58 +98,55 @@ export const ar: LanguageTranslation = {
 
         last_saved: 'آخر حفظ',
         saved: 'تم الحفظ',
-        loading_diagram: '...جارِ تحميل الرسم البياني',
+        loading_diagram: 'جاري تحميل الرسم...',
         deselect_all: 'إلغاء تحديد الكل',
         select_all: 'تحديد الكل',
         clear: 'مسح',
         show_more: 'عرض المزيد',
         show_less: 'عرض أقل',
         copy_to_clipboard: 'نسخ إلى الحافظة',
-        copied: '!تم النسخ',
+        copied: 'تم النسخ!',
 
         side_panel: {
-            schema: ':المخطط',
+            schema: 'المخطط:',
             filter_by_schema: 'تصفية حسب المخطط',
-            search_schema: '...بحث في المخطط',
-            no_schemas_found: '.لم يتم العثور على مخططات',
-            view_all_options: '...عرض جميع الخيارات',
+            search_schema: 'بحث في المخطط...',
+            no_schemas_found: 'لم يتم العثور على مخططات.',
+            view_all_options: 'عرض جميع الخيارات...',
             tables_section: {
                 tables: 'الجداول',
                 add_table: 'إضافة جدول',
                 filter: 'تصفية',
                 collapse: 'طي الكل',
-                // TODO: Translate
-                clear: 'Clear Filter',
-                no_results: 'No tables found matching your filter.',
-                // TODO: Translate
-                show_list: 'Show Table List',
-                show_dbml: 'Show DBML Editor',
+                clear: 'مسح التصفية',
+                no_results: 'لم يتم العثور على جداول تطابق التصفية.',
+                show_list: 'عرض قائمة الجداول',
+                show_dbml: 'عرض محرر DBML',
 
                 table: {
                     fields: 'الحقول',
-                    nullable: 'يمكن ان يكون فارغاً؟',
+                    nullable: 'قابل للفراغ؟',
                     primary_key: 'المفتاح الأساسي',
                     indexes: 'الفهارس',
-                    comments: 'تعليقات',
+                    comments: 'التعليقات',
                     no_comments: 'لا توجد تعليقات',
                     add_field: 'إضافة حقل',
                     add_index: 'إضافة فهرس',
-                    index_select_fields: 'حدد الحقول',
-                    no_types_found: 'لا يوجد أنواع',
-                    field_name: 'الإسم',
+                    index_select_fields: 'اختيار الحقول',
+                    no_types_found: 'لم يتم العثور على أنواع',
+                    field_name: 'الاسم',
                     field_type: 'النوع',
                     field_actions: {
                         title: 'خصائص الحقل',
                         unique: 'فريد',
-                        comments: 'تعليقات',
-                        no_comments: 'لا يوجد تعليقات',
+                        character_length: 'الطول الأقصى',
+                        comments: 'التعليقات',
+                        no_comments: 'لا توجد تعليقات',
                         delete_field: 'حذف الحقل',
-                        // TODO: Translate
-                        character_length: 'Max Length',
                     },
                     index_actions: {
                         title: 'خصائص الفهرس',
-                        name: 'الإسم',
+                        name: 'الاسم',
                         unique: 'فريد',
                         delete_index: 'حذف الفهرس',
                     },
@@ -163,13 +155,13 @@ export const ar: LanguageTranslation = {
                         change_schema: 'تغيير المخطط',
                         add_field: 'إضافة حقل',
                         add_index: 'إضافة فهرس',
-                        duplicate_table: 'نسخ الجدول',
+                        duplicate_table: 'تكرار الجدول',
                         delete_table: 'حذف الجدول',
                     },
                 },
                 empty_state: {
                     title: 'لا توجد جداول',
-                    description: 'أنشئ جدولاً للبدء',
+                    description: 'قم بإنشاء جدول للبدء',
                 },
             },
             relationships_section: {
@@ -179,83 +171,80 @@ export const ar: LanguageTranslation = {
                 collapse: 'طي الكل',
                 relationship: {
                     primary: 'الجدول الأساسي',
-                    foreign: 'الجدول المرتبط',
-                    cardinality: 'الكاردينالية',
+                    foreign: 'الجدول المرجعي',
+                    cardinality: 'نوع العلاقة',
                     delete_relationship: 'حذف',
                     relationship_actions: {
-                        title: 'إجراءات',
+                        title: 'الإجراءات',
                         delete_relationship: 'حذف',
                     },
                 },
                 empty_state: {
                     title: 'لا توجد علاقات',
-                    description: 'إنشئ علاقة لربط الجداول',
+                    description: 'قم بإنشاء علاقة لربط الجداول',
                 },
             },
             dependencies_section: {
-                dependencies: 'الاعتمادات',
+                dependencies: 'التبعيات',
                 filter: 'تصفية',
                 collapse: 'طي الكل',
                 dependency: {
                     table: 'الجدول',
-                    dependent_table: 'عرض الاعتمادات',
+                    dependent_table: 'عرض التبعية',
                     delete_dependency: 'حذف',
                     dependency_actions: {
-                        title: 'إجراءات',
+                        title: 'الإجراءات',
                         delete_dependency: 'حذف',
                     },
                 },
                 empty_state: {
-                    title: 'لا توجد اعتمادات',
-                    description: 'إنشاء اعتماد للبدء',
+                    title: 'لا توجد تبعيات',
+                    description: 'قم بإنشاء عرض للبدء',
                 },
             },
 
-            // TODO: Translate
             areas_section: {
-                areas: 'Areas',
-                add_area: 'Add Area',
-                filter: 'Filter',
-                clear: 'Clear Filter',
-                no_results: 'No areas found matching your filter.',
+                areas: 'المناطق',
+                add_area: 'إضافة منطقة',
+                filter: 'تصفية',
+                clear: 'مسح التصفية',
+                no_results: 'لم يتم العثور على مناطق تطابق التصفية.',
 
                 area: {
                     area_actions: {
-                        title: 'Area Actions',
-                        edit_name: 'Edit Name',
-                        delete_area: 'Delete Area',
+                        title: 'إجراءات المنطقة',
+                        edit_name: 'تعديل الاسم',
+                        delete_area: 'حذف المنطقة',
                     },
                 },
                 empty_state: {
-                    title: 'No areas',
-                    description: 'Create an area to get started',
+                    title: 'لا توجد مناطق',
+                    description: 'قم بإنشاء منطقة للبدء',
                 },
             },
 
-            // TODO: Translate
             custom_types_section: {
-                custom_types: 'Custom Types',
-                filter: 'Filter',
-                clear: 'Clear Filter',
-                no_results: 'No custom types found matching your filter.',
+                custom_types: 'أنواع مخصصة',
+                filter: 'تصفية',
+                clear: 'مسح التصفية',
+                no_results: 'لم يتم العثور على أنواع مخصصة تطابق التصفية.',
                 empty_state: {
-                    title: 'No custom types',
-                    description:
-                        'Custom types will appear here when they are available in your database',
+                    title: 'لا توجد أنواع مخصصة',
+                    description: 'ستظهر الأنواع المخصصة هنا عند توفرها في قاعدة البيانات',
                 },
                 custom_type: {
-                    kind: 'Kind',
-                    enum_values: 'Enum Values',
-                    composite_fields: 'Fields',
-                    no_fields: 'No fields defined',
-                    field_name_placeholder: 'Field name',
-                    field_type_placeholder: 'Select type',
-                    add_field: 'Add Field',
+                    kind: 'النوع',
+                    enum_values: 'قيم التعداد',
+                    composite_fields: 'الحقول',
+                    no_fields: 'لا توجد حقول محددة',
+                    field_name_placeholder: 'اسم الحقل',
+                    field_type_placeholder: 'اختر نوعًا',
+                    add_field: 'إضافة حقل',
                     custom_type_actions: {
-                        title: 'Actions',
-                        delete_custom_type: 'Delete',
+                        title: 'الإجراءات',
+                        delete_custom_type: 'حذف',
                     },
-                    delete_custom_type: 'Delete Type',
+                    delete_custom_type: 'حذف النوع',
                 },
             },
         },
@@ -267,48 +256,47 @@ export const ar: LanguageTranslation = {
             show_all: 'عرض الكل',
             undo: 'تراجع',
             redo: 'إعادة',
-            reorder_diagram: 'إعادة ترتيب الرسم البياني',
+            reorder_diagram: 'إعادة ترتيب الرسم',
             highlight_overlapping_tables: 'تمييز الجداول المتداخلة',
         },
 
         new_diagram_dialog: {
             database_selection: {
-                title: 'ما هو نوع قاعدة البيانات الخاصة بك؟',
-                description:
-                    'تتمتع كل قاعدة بيانات بمميزاتها وقدراتها الفريدة.',
-                check_examples_long: 'ألقي نظرة على الأمثلة',
+                title: 'ما هي قاعدة البيانات الخاصة بك؟',
+                description: 'كل قاعدة بيانات لها ميزات وقدرات فريدة.',
+                check_examples_long: 'عرض الأمثلة',
                 check_examples_short: 'أمثلة',
             },
 
             import_database: {
-                title: 'إسترد قاعدة بياناتك',
-                database_edition: ':إصدار قاعدة البيانات',
-                step_1: ':قم بتشغيل هذا البرنامج النصي في قاعدة بياناتك',
-                step_2: ':إلصق نتيجة البرنامج النصي هنا →',
-                script_results_placeholder: '...نتيجة البرنامج النصي هنا',
+                title: 'استيراد قاعدة البيانات',
+                database_edition: 'إصدار قاعدة البيانات:',
+                step_1: 'قم بتشغيل هذا البرنامج النصي في قاعدة البيانات:',
+                step_2: 'الصق نتيجة البرنامج النصي في هذه النافذة →',
+                script_results_placeholder: 'نتيجة البرنامج النصي هنا...',
                 ssms_instructions: {
-                    button_text: 'SSMS تعليمات',
-                    title: 'تعليمات',
-                    step_1: 'SQL SERVER < انتقل إلى الأدوات > الخيارات > نتائح الاستعلام',
-                    step_2: '(اضبطها على 9999999) XML اذا كنت تستخدم "نتائج إلى الشبكة"، قم بتغيير الحد الاقصى للاحرف المستردة للبيانات غير',
+                    button_text: 'تعليمات SSMS',
+                    title: 'التعليمات',
+                    step_1: 'اذهب إلى أدوات > خيارات > نتائج الاستعلام > SQL Server.',
+                    step_2: 'إذا كنت تستخدم "النتائج إلى الشبكة"، غيّر الحد الأقصى للأحرف المسترجعة للبيانات غير XML (اضبط على 9999999).',
                 },
-                instructions_link: 'تحتاج مساعدة؟ شاهد الفيديو',
+                instructions_link: 'تحتاج مساعدة؟ شاهد كيف',
                 check_script_result: 'تحقق من نتيجة البرنامج النصي',
             },
 
             cancel: 'إلغاء',
             import_from_file: 'استيراد من ملف',
             back: 'رجوع',
-            empty_diagram: 'مخطط فارغ',
+            empty_diagram: 'رسم تخطيطي فارغ',
             continue: 'متابعة',
             import: 'استيراد',
         },
 
         open_diagram_dialog: {
-            title: 'فتح مخطط',
-            description: 'اختر مخططًا لفتحه من القائمة ادناه',
+            title: 'فتح رسم تخطيطي',
+            description: 'اختر رسمًا تخطيطيًا لفتحه من القائمة أدناه.',
             table_columns: {
-                name: 'الإسم',
+                name: 'الاسم',
                 created_at: 'تاريخ الإنشاء',
                 last_modified: 'آخر تعديل',
                 tables_count: 'الجداول',
@@ -318,19 +306,16 @@ export const ar: LanguageTranslation = {
         },
 
         export_sql_dialog: {
-            title: 'SQL تصدير',
-            description:
-                '{{databaseType}} صدّر مخطط الرسم البياني إلى برنامج نصي لـ',
+            title: 'تصدير SQL',
+            description: 'قم بتصدير مخطط الرسم الخاص بك إلى برنامج {{databaseType}}',
             close: 'إغلاق',
             loading: {
-                text: '...{{databaseType}} ل SQL يقوم الذكاء الاصطناعي بإنشاء',
-                description: 'هذا قد يستغرق 30 ثانية',
+                text: 'الذكاء الاصطناعي يقوم بإنشاء SQL لـ {{databaseType}}...',
+                description: 'يجب أن يستغرق هذا حتى 30 ثانية.',
             },
             error: {
-                message:
-                    'النصي. يرجى المحاولة مرة اخرى لاحقاً او <0>اتصل بنا</0> SQL خطأ في إنشاء برنامج',
-                description:
-                    ' الخاصة بك. راجع الدليل <0>هنا</0> OPENAI_TOKEN لا تتردد في استخدام',
+                message: 'حدث خطأ أثناء إنشاء برنامج SQL. يرجى المحاولة لاحقًا أو <0>الاتصال بنا</0>.',
+                description: 'يمكنك استخدام OPENAI_TOKEN الخاص بك، راجع الدليل <0>هنا</0>.',
             },
         },
 
@@ -338,12 +323,12 @@ export const ar: LanguageTranslation = {
             title: 'إنشاء علاقة',
             primary_table: 'الجدول الأساسي',
             primary_field: 'الحقل الأساسي',
-            referenced_table: 'الجدول المرتبط',
-            referenced_field: 'الحقل المرتبط',
-            primary_table_placeholder: 'حدد الجدول',
-            primary_field_placeholder: 'حدد الحقل',
-            referenced_table_placeholder: 'حدد الجدول',
-            referenced_field_placeholder: 'حدد الحقل',
+            referenced_table: 'الجدول المرجعي',
+            referenced_field: 'الحقل المرجعي',
+            primary_table_placeholder: 'اختر جدول',
+            primary_field_placeholder: 'اختر حقل',
+            referenced_table_placeholder: 'اختر جدول',
+            referenced_field_placeholder: 'اختر حقل',
             no_tables_found: 'لم يتم العثور على جداول',
             no_fields_found: 'لم يتم العثور على حقول',
             create: 'إنشاء',
@@ -351,17 +336,14 @@ export const ar: LanguageTranslation = {
         },
 
         import_database_dialog: {
-            title: 'استيراد إلى المخطط الحالي',
+            title: 'استيراد إلى الرسم الحالي',
             override_alert: {
-                title: 'استيراد قاعدة بيانات',
+                title: 'استيراد قاعدة البيانات',
                 content: {
-                    alert: 'سيؤدي استيراد هذا المخطط إلى التأثير على الجداول والعلاقات الحالية.',
-                    new_tables:
-                        'جداول جديدة <bold>{{newTablesNumber}}</bold> سيتم إضافة',
-                    new_relationships:
-                        'علاقات جديدة <bold>{{newRelationshipsNumber}}</bold> سيتم إنشاء',
-                    tables_override:
-                        'جداول <bold>{{tablesOverrideNumber}}</bold> سيتم تعديل',
+                    alert: 'استيراد هذا الرسم سيؤثر على الجداول والعلاقات الموجودة.',
+                    new_tables: 'سيتم إضافة <bold>{{newTablesNumber}}</bold> جداول جديدة.',
+                    new_relationships: 'سيتم إنشاء <bold>{{newRelationshipsNumber}}</bold> علاقات جديدة.',
+                    tables_override: 'سيتم استبدال <bold>{{tablesOverrideNumber}}</bold> جداول.',
                     proceed: 'هل تريد المتابعة؟',
                 },
                 import: 'استيراد',
@@ -370,105 +352,101 @@ export const ar: LanguageTranslation = {
         },
 
         export_image_dialog: {
-            title: 'تصدير الصورة',
-            description: ':اختر عامل المقياس للتصدير',
+            title: 'تصدير صورة',
+            description: 'اختر معامل القياس للتصدير:',
             scale_1x: '1x عادي',
-            scale_2x: '2x (موصى به)',
+            scale_2x: '2x (مُوصى به)',
             scale_3x: '3x',
             scale_4x: '4x',
             cancel: 'إلغاء',
             export: 'تصدير',
-            // TODO: Translate
-            advanced_options: 'Advanced Options',
-            pattern: 'Include background pattern',
-            pattern_description: 'Add subtle grid pattern to background.',
-            transparent: 'Transparent background',
-            transparent_description: 'Remove background color from image.',
+            advanced_options: 'خيارات متقدمة',
+            pattern: 'تضمين نمط الخلفية',
+            pattern_description: 'إضافة نمط شبكة خفيف للخلفية.',
+            transparent: 'خلفية شفافة',
+            transparent_description: 'إزالة لون الخلفية من الصورة.',
         },
 
         new_table_schema_dialog: {
-            title: 'اختر مخططاً',
-            description:
-                '.يتم حالياً عرض مخططات متعددة. اختر واحداً للجدول الجديد',
+            title: 'اختر المخطط',
+            description: 'يتم عرض مخططات متعددة حاليًا. اختر واحدًا للجدول الجديد.',
             cancel: 'إلغاء',
             confirm: 'تأكيد',
         },
 
         update_table_schema_dialog: {
             title: 'تغيير المخطط',
-            description: '"{{tableName}}" تحديث مخطط الجدول',
+            description: 'تحديث مخطط الجدول "{{tableName}}"',
             cancel: 'إلغاء',
             confirm: 'تغيير',
         },
 
         star_us_dialog: {
-            title: '!ساعدنا على التحسن',
-            description: '؟! إنها مجرد نقرة واحدةGITHUB هل ترغب في تقييمنا على',
+            title: 'ساعدنا على التحسن!',
+            description: 'هل ترغب في إضافة نجم لنا على GitHub؟ الأمر بسيط جدًا!',
             close: 'ليس الآن',
-            confirm: '!بالتأكيد',
+            confirm: 'بالتأكيد!',
         },
         export_diagram_dialog: {
-            title: 'تصدير المخطط',
-            description: ':اختر التنسيق للتصدير',
+            title: 'تصدير الرسم',
+            description: 'اختر تنسيق التصدير:',
             format_json: 'JSON',
             cancel: 'إلغاء',
             export: 'تصدير',
             error: {
-                title: 'حدث خطأ أثناء التصدير',
-                description:
-                    'support@chartdb.io حدث خطأ ما. هل تحتاج إلى مساعدة؟',
+                title: 'خطأ في تصدير الرسم',
+                description: 'حدث خطأ ما. تحتاج مساعدة؟ support@chartdb.io',
             },
         },
+
         import_diagram_dialog: {
-            title: 'استيراد الرسم البياني',
-            description: ':للرسم البياني ادناه JSON قم بلصق',
+            title: 'استيراد رسم',
+            description: 'استيراد رسم من ملف JSON.',
             cancel: 'إلغاء',
             import: 'استيراد',
             error: {
-                title: 'حدث خطأ أثناء الاستيراد',
-                description:
-                    'support@chartdb.io و المحاولة مرة اخرى. هل تحتاج إلى المساعدة؟ JSON غير صالح. يرجى التحقق من JSON الرسم البياني',
+                title: 'خطأ في استيراد الرسم',
+                description: 'ملف JSON للرسم غير صالح. يرجى التحقق من JSON والمحاولة مرة أخرى. تحتاج مساعدة؟ support@chartdb.io',
             },
         },
+
         import_dbml_dialog: {
-            // TODO: Translate
-            title: 'Import DBML',
-            example_title: 'Import Example DBML',
-            description: 'Import a database schema from DBML format.',
-            import: 'Import',
-            cancel: 'Cancel',
-            skip_and_empty: 'Skip & Empty',
-            show_example: 'Show Example',
+            example_title: 'استيراد مثال DBML',
+            title: 'استيراد DBML',
+            description: 'استيراد مخطط قاعدة بيانات بتنسيق DBML.',
+            import: 'استيراد',
+            cancel: 'إلغاء',
+            skip_and_empty: 'تخطي وبدء فارغ',
+            show_example: 'عرض مثال',
             error: {
-                title: 'Error',
-                description: 'Failed to parse DBML. Please check the syntax.',
+                title: 'خطأ في استيراد DBML',
+                description: 'فشل في تحليل DBML. يرجى التحقق من الصيغة.',
             },
         },
         relationship_type: {
-            one_to_one: 'واحد إلى واحد',
-            one_to_many: 'واحد إلى متعدد',
-            many_to_one: 'متعدد إلى واحد',
-            many_to_many: 'متعدد إلى متعدد',
+            one_to_one: 'واحد لواحد',
+            one_to_many: 'واحد لكثير',
+            many_to_one: 'كثير لواحد',
+            many_to_many: 'كثير لكثير',
         },
 
         canvas_context_menu: {
             new_table: 'جدول جديد',
             new_relationship: 'علاقة جديدة',
-            // TODO: Translate
-            new_area: 'New Area',
+            new_area: 'منطقة جديدة',
         },
 
         table_node_context_menu: {
             edit_table: 'تعديل الجدول',
-            duplicate_table: 'نسخ الجدول',
+            duplicate_table: 'تكرار الجدول',
             delete_table: 'حذف الجدول',
-            add_relationship: 'Add Relationship', // TODO: Translate
+            add_relationship: 'إضافة علاقة',
         },
 
-        snap_to_grid_tooltip: '({{key}} مغنظة الشبكة (اضغط مع الاستمرار على',
+        snap_to_grid_tooltip: 'محاذاة إلى الشبكة (اضغط {{key}})',
 
         tool_tips: {
-            double_click_to_edit: 'انقر مرتين للتعديل',
+            double_click_to_edit: 'انقر نقرًا مزدوجًا للتعديل',
         },
 
         language_select: {
